@@ -1,6 +1,7 @@
 plugins {
     id 'org.springframework.boot' version '2.1.5.RELEASE'
     id 'java'
+    id 'idea'
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -13,16 +14,12 @@ repositories {
     mavenCentral()
 }
 
-
-//configurations.compileClasspath.resolutionStrategy.dependencySubstitution {
-//	substitute(module('com.mars:gradle-models')).because('I dont know yet.').with(project(':gradle-models'))
-//}
-
-
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-//    implementation project(':gradle-models')
+    implementation 'com.mars:gradle-models:0.0.1'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+
