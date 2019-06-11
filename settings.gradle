@@ -3,4 +3,6 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
+println 'This is executed during the initialization phase on CORE module.'
+
 rootProject.name = 'gradle-core'
